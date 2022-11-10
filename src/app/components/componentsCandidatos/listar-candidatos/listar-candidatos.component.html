@@ -1,0 +1,32 @@
+<div class="col-md-4 t-3" *ngFor="let dato of lista ">
+    <div class="card text_center btn btn-secondary">
+        <button routerLink="/inicio/id">Actualizar
+        
+        <div class="card_header bg-dark text-white d-flex justify-content-betwen align-item-center">
+            {{dato.cedula+" "+dato.apellido}}
+        </div>
+        <div class="card-body" style="color: black;">
+            {{dato.body}}
+        </div>
+        </button>
+        <div class="card-body">
+            <button class="btn btn-danger" (click)="open(content)">eliminar</button>
+        </div>
+        
+    </div>
+</div>
+<!--popup-->
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">seguro que deseas eliminar</h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="eliminarUsuario(lista._id)" (click)="modal.close('Save click')" >borrar</button>
+    </div>
+  </ng-template>
+    
+  <hr>
