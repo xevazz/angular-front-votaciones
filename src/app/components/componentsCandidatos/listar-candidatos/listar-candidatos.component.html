@@ -80,24 +80,28 @@
 </ng-template>
 
 <ng-template #edit let-modal>  
-    <div id="formulario" class="modal-header">
-        <div class="form-floating mb-lg-2">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">actualizar</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+    <div id="formulario" class="modal-body">
+        <div>
             <input type="text" class="form-control" id="Nombre" placeholder="Nombre">
             <label for="floatingInput">Nombre</label>
           </div>
-          <div class="form-floating mb-lg-2">
+          <div>
             <input type="text" class="form-control" id="Candidato" placeholder="Candidato">
             <label for="floatingPassword">Candidato</label>
           </div>
-          <div class="form-floating mb-lg-2">
+          <div>
             <input type="text" class="form-control" id="Resolucion" placeholder="Resolucion">
             <label for="floatingPassword">Resolucion</label>
           </div>
         </div>
         <div>
-          <div class="d-flex p-5">
+          <div>
             <div id="btncancelar">
-                <button id="btncancelar" class="btn btn-primary" type="button">Cancelar</button>
+                <button id="btncancelar" class="btn btn-primary" type="button"  (click)="modal.dismiss('Cross click')">Cancelar</button>
             </div>
             <div id="btnguardar">
                 <button id="btnguardar" class="btn btn-primary " type="button">Guardar</button>
