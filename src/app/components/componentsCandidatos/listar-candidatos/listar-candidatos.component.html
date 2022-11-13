@@ -1,22 +1,72 @@
-<div class="col-md-4 t-3" *ngFor="let dato of lista ">
-    <div class="card text_center btn btn-secondary">
-        <button routerLink="/inicio/id">Actualizar
-        
-        <div class="card_header bg-dark text-white d-flex justify-content-betwen align-item-center">
-            {{dato.cedula+" "+dato.apellido}}
+
+
+    <div id="fondo">
+        <div id="subHeader" >
+            <h5 class="adminPartidos">Administración de Partidos</h5>
         </div>
-        <div class="card-body" style="color: black;">
-            {{dato.body}}
+        <div  id="subFondo">
+            <div id="table" class="d-flex">
+                <table class="table  text-opacity-100 text-white align-text-bottom table-borderless" >
+                    <thead>
+                      <tr class="table-responsive-lg text-capitalize"> 
+                         <th scope="col">nombre</th>
+                        <th scope="col">apellido</th>
+                        <th scope="col">cedula</th>
+                        <th scope="col">resolucion</th>
+                         <th> </th>
+                      </tr>
+                    </thead> 
+                    <tbody>
+                            <!--ng for trae individualmente cada dato-->
+                            <tr *ngFor="let dato of lista ">
+                               <td>{{dato.nombre}}</td>
+                               <td>{{dato.apellido}}</td>
+                               <td>{{dato.cedula}}</td>
+                               <td>{{dato.resolucion}}</td>
+                               <td> 
+       
+                                        <button type="button" class="btn btn-outline-secondary" (click)="open(edit)">
+                                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-pencil" viewBox="0 0 16 16">
+                                               <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                                           </svg>     
+                                       </button> 
+                                        <button type="button" class="btn btn-outline-secondary" (click)="open(delete)">
+                                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-trash3" viewBox="0 0 16 16" >
+                                                <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+                                           </svg>   
+                                       </button>
+                               </td>
+                             </tr>
+                        
+
+                    </tbody>
+                  </table> 
+            </div>
+            <div class="d-block " id="botoneroInterno" >
+                <button id="btnCrear" >Registrar</button>
+            </div>
         </div>
-        </button>
-        <div class="card-body">
-            <button class="btn btn-danger" (click)="open(content)">eliminar</button>
+        <div class="d-flex p-5">
+            <div id="btnvolver">
+                <button id="btnvolVer" class="btn btn-primary" type="button">Volver</button>
+            </div>
+            <div id="btnSalir">
+                <button id="Salir" class="btn btn-primary " type="button">Salir</button>
+            </div>
         </div>
-        
+    
     </div>
-</div>
+    <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Atencion</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+
 <!--popup-->
-<ng-template #content let-modal>
+<ng-template #delete let-modal>
     <div class="modal-header">
       <h4 class="modal-title" id="modal-basic-title">seguro que deseas eliminar</h4>
       <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
@@ -27,6 +77,33 @@
     <div class="modal-footer">
       <button type="button" class="btn btn-outline-dark" (click)="eliminarUsuario(lista._id)" (click)="modal.close('Save click')" >borrar</button>
     </div>
-  </ng-template>
-    
-  <hr>
+</ng-template>
+
+<ng-template #edit let-modal>  
+    <div id="formulario" class="modal-header">
+        <div class="form-floating mb-lg-2">
+            <input type="text" class="form-control" id="Nombre" placeholder="Nombre">
+            <label for="floatingInput">Nombre</label>
+          </div>
+          <div class="form-floating mb-lg-2">
+            <input type="text" class="form-control" id="Candidato" placeholder="Candidato">
+            <label for="floatingPassword">Candidato</label>
+          </div>
+          <div class="form-floating mb-lg-2">
+            <input type="text" class="form-control" id="Resolucion" placeholder="Resolucion">
+            <label for="floatingPassword">Resolucion</label>
+          </div>
+        </div>
+        <div>
+          <div class="d-flex p-5">
+            <div id="btncancelar">
+                <button id="btncancelar" class="btn btn-primary" type="button">Cancelar</button>
+            </div>
+            <div id="btnguardar">
+                <button id="btnguardar" class="btn btn-primary " type="button">Guardar</button>
+            </div>
+        </div>
+    </div>
+</ng-template> 
+
+  

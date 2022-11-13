@@ -1,0 +1,201 @@
+#header{
+    color: #003058;  
+    
+}
+#txtHeader{
+    font-family: inter;
+    font-weight: 500;
+}
+
+#body{
+    background-color: #003058;
+}
+#subHeader{
+    background-color: #012039;   
+}
+
+.adminPartidos{
+    color: white;
+    font-family: inter;
+    margin-bottom: 20px;
+    padding: 25px;
+    font-weight: 400;
+    margin-left: 30px;
+    font-size: medium;
+}
+#fondo{
+    background-color: #003058;
+    width: 95%;
+    
+}
+#subFondo{
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 2.5%;
+    border-radius: 10px; 
+    background-color: #012039;
+    height: 22rem;
+}
+
+#table{   
+    color: white;
+    border-radius: 10px;
+    margin: 2%;
+    width:96.4%; 
+    background-color: #003058;
+    font: inter;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+    text-align: left;
+}
+#btnCrear{
+    background-color:  #003058;
+    border-radius: 9px;
+    color: white;
+    border: none;
+    height: 40px;
+    width: 120px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;   
+}
+
+#botoneroInterno{
+    text-align: right;
+    padding: 1.2rem;   
+}
+
+#btnSalir{
+    width: 100%;
+    text-align: end;
+
+}
+#Salir{
+    background-color: #012039;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 40px;
+    width: 120px;
+    
+}
+#btnvolVer{
+    background: #43D1B8;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 40px;
+    width: 120px;
+    color: #003058;
+    font-weight: 600;
+    font: inter;
+}
+
+
+#noti{ 
+    position:fixed;
+    width: 300px;
+    height: 180px;
+    left: 580px;
+    top: 293px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    }
+    #icono{
+        color: #003058;
+        position: center;
+        left: 40px;
+    }
+    #botonera{
+    position: absolute;
+    left: 65px;
+    }
+    
+    #si{
+        background-color:#FF3F5B;
+        border-color: #FF3F5B;  
+    }
+    
+    #no{
+       background-color:  #003058; 
+       border-color: #003058;
+    }
+    
+    #formulario{
+    position:fixed;
+    width: 300px;
+    height: 180px;
+    left: 580px;
+    top: 293px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    color: grey;
+    
+    }
+    
+    #caja{
+    position:fixed;
+    width: 420px;
+    height: 400px;
+    left: 519px;
+    top: 200px;
+    background-color: white;
+    box-shadow: 0px 4px 4px 4px rgba(0.25, 0.25, 0.25, 0.25);
+    border-radius: 10px;
+    }
+    
+    #text{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400px;
+    padding-left: 2rem;
+    /* identical to box height */
+    color: #012039;
+    
+    }
+    
+    #btncaja{
+        padding-top: 0.80cm;
+        padding-right: 690px;
+    }
+    
+    #btnguardar{
+        position:fixed;
+        top: 530px;
+        left: 800px;
+        background-color: #003058;
+    }
+    #btncancelar{
+        position:fixed;
+        top: 530px;
+        left: 700px;
+        background-color:  #E03D5B;
+    }
+    
+    .btn-close{
+        size: 0.2cm
+    }
+
+#AlertaEliminado{
+position: absolute;
+width: 270px;
+height: 80px;
+left: 1200px;
+margin-top: 15px;
+animation-duration: 3s;
+}
+
+#AlertaCreado{
+    position: absolute;
+    width: 270px;
+    height: 80px;
+    left: 1200px;
+    margin-top: 15px;
+    animation-duration: 3s;
+    }
+
+#AlertaEditado{
+        position: absolute;
+        width: 340px;
+        height: 80px;
+        left: 1130px;
+        margin-top: 15px;
+        animation-duration: 3s;
+        }
