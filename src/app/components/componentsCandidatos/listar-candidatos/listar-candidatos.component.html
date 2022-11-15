@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="d-block " id="botoneroInterno" >
-                <button id="btnCrear" >Registrar</button>
+                <button id="btnCrear" (click)="open(agregar)">Registrar</button>
             </div>
         </div>
         <div class="d-flex p-5">
@@ -86,7 +86,7 @@
 <ng-template #edit let-modal>  
   <div>
     <div class="modal-header ">
-      <h4 class="modal-title" id="modal-basic-title">actualizar</h4>
+      <h4 class="modal-title" id="modal-basic-title">Actualizar este elemento</h4>
       <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
     </div>
       <div  class="modal-body modal-dialog">
@@ -109,12 +109,45 @@
                   <button  class="btn btn-danger" type="button"  (click)="modal.dismiss('Cross click')">Cancelar</button>
               </div>
               <div>
-                  <button class="btn btn-primary " type="button">Guardar</button>
+                  <button class="btn btn-primary " type="button">actualizar</button>
               </div>
           </div>
       </div>
   </div>
 
 </ng-template> 
-
+    <!--crear-->
+<ng-template #agregar let-modal>  
+  <div>
+    <div class="modal-header ">
+      <h4 class="modal-title" id="modal-basic-title">Crear una nueva</h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+      <div  class="modal-body ">
+            <div class="p-2">
+              <input type="text" placeholder="Nombre" [(ngModel)]="user.nombre"> 
+            </div>
+            <div class="p-2"> 
+              <input type="text" placeholder="apellido" [(ngModel)]="user.apellido"> 
+            </div>
+            <div class="p-2">
+              <input type="text" placeholder="cedula" [(ngModel)]="user.cedula">
+            </div>
+            <div class="p-2"> 
+              <input type="text" placeholder="Resolucion" [(ngModel)]="user.resolucion">
+            </div>
+          </div>
+              <div>
+                <div class="modal-footer">
+                  <div >
+                      <button  class="btn btn-danger" type="button"  (click)="modal.dismiss('Cross click')">Cancelar</button>
+                  </div>
+                  <div>
+                      <button class="btn btn-primary " type="button" (click)="guardarNuevoUsuario()" (click)="modal.close('Save click')">agregar</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+    
+    </ng-template> 
   

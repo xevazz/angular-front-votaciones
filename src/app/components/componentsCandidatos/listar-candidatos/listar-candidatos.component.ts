@@ -1,6 +1,7 @@
 import { Component,HostBinding,Inject, OnInit } from '@angular/core';
 import { DataService } from "../../../services/data.service";
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { User } from "../../../models/user-candidato";
 
 export interface DialogData {
 }
@@ -13,11 +14,18 @@ export interface DialogData {
 
 export class ListarCandidatosComponent implements OnInit {
   @HostBinding('class') clases = "row";
+  user: User = {
+    _id:0,
+    apellido:'',
+    cedula:0,
+    nombre:'',
+    resolucion:''
+  };
   closeResult = '';
   lista: any;
   id ="1a2b3c";
   constructor(private DataService:DataService, private modalService: NgbModal) { }
-
+  public bool: any;
   open(content: any) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
@@ -57,6 +65,18 @@ export class ListarCandidatosComponent implements OnInit {
   }
   guardarId(ide: string){
     this.id=ide;
+  }
+  guardarNuevoUsuario(){
+    delete this.user._id;
+    this.DataService.crearNuevo(this.user).subscribe(
+      res=> {
+        console.log(res);
+        this.bool=false;
+
+      },
+      err=> console.error(err)
+    )
+    location.reload();
   }
 }
 
