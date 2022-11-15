@@ -15,6 +15,7 @@ export class ListarCandidatosComponent implements OnInit {
   @HostBinding('class') clases = "row";
   closeResult = '';
   lista: any;
+  id ="1a2b3c";
   constructor(private DataService:DataService, private modalService: NgbModal) { }
 
   open(content: any) {
@@ -53,6 +54,9 @@ export class ListarCandidatosComponent implements OnInit {
       },
       err=>console.error(err)
     )
+  }
+  guardarId(ide: string){
+    this.id=ide;
   }
 }
 
