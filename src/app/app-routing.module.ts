@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AgregarCandidatosComponent } from "./components/componentsCandidatos/agregar-candidatos/agregar-candidatos.component";
 import { InicioComponent } from "./components/componentsInicio/inicio/inicio.component";
+import { ListarCandidatosComponent } from "./components/componentsCandidatos/listar-candidatos/listar-candidatos.component";
 
 
 
@@ -18,8 +19,8 @@ const routes: Routes = [
     component:InicioComponent
   },
   {
-    path:'add',
-    component:AgregarCandidatosComponent
+    path:'candidatos',
+    component:ListarCandidatosComponent
   },
   
 ];

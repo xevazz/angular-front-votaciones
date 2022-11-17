@@ -1,2 +1,10 @@
+
 <app-navigation></app-navigation>
-<app-listar-candidatos></app-listar-candidatos>
+<div class="d-flex p-5">
+    <div id="btnvolver">
+      <button class="btn btn-primary" [routerLink]="['/candidatos']" type="button">candidatos</button>
+    </div>
+    <div>
+      <button  class="btn btn-primary " [routerLink]="['/']" type="button">Salir</button>
+    </div>
+  </div>
