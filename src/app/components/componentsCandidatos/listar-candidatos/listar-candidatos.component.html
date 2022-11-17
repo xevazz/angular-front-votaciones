@@ -27,7 +27,7 @@
                                <td>{{dato.resolucion}}</td>
                                <td> 
        
-                                        <button type="button" class="btn btn-outline-secondary" (click)="open(edit)" >
+                                        <button type="button" class="btn btn-outline-secondary" (click)="guardarId(dato._id)"  (click)="open(edit)" >
                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-pencil" viewBox="0 0 16 16">
                                                <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
                                            </svg>     
@@ -89,27 +89,27 @@
       <h4 class="modal-title" id="modal-basic-title">Actualizar este elemento</h4>
       <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
     </div>
-      <div  class="modal-body modal-dialog">
-            <div class="p-2">
-              <input type="text" placeholder="Nombre"> 
-            </div>
-            <div class="p-2"> 
-              <input type="text" placeholder="apellido"> 
-            </div>
-            <div class="p-2">
-              <input type="text" placeholder="cedula">
-            </div>
-            <div class="p-2"> 
-              <input type="text" placeholder="Resolucion">
-            </div>
-          </div>
+      <div  class="modal-body">
+        <div class="p-2">
+          <input type="text" placeholder="Nombre" [(ngModel)]="user.nombre"> 
+        </div>
+        <div class="p-2"> 
+          <input type="text" placeholder="apellido" [(ngModel)]="user.apellido"> 
+        </div>
+        <div class="p-2">
+          <input type="text" placeholder="cedula" [(ngModel)]="user.cedula">
+        </div>
+        <div class="p-2"> 
+          <input type="text" placeholder="Resolucion" [(ngModel)]="user.resolucion">
+        </div>
+      </div>
           <div>
             <div class="modal-footer">
               <div >
                   <button  class="btn btn-danger" type="button"  (click)="modal.dismiss('Cross click')">Cancelar</button>
               </div>
               <div>
-                  <button class="btn btn-primary " type="button">actualizar</button>
+                  <button class="btn btn-primary " type="button" (click)="actualizarUsuario(this.id)" (click)="modal.close('Save click')">actualizar</button>
               </div>
           </div>
       </div>

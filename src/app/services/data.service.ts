@@ -29,8 +29,8 @@ export class DataService {
   eliminar(id: string){
     return this.http.delete(this.API_URI+'/'+id);
   }
-  actualizar(usuario:User){
-    return this.http.put(this.API_URI2,usuario);
+  actualizar(id: string, usuario:User){
+    return this.http.put(this.API_URI+'/'+id,usuario);
   }   
 
 }

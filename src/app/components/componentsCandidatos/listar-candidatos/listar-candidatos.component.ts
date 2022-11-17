@@ -78,5 +78,16 @@ export class ListarCandidatosComponent implements OnInit {
     )
     location.reload();
   }
+  actualizarUsuario(id: string){
+
+    delete this.user._id;
+    this.DataService.actualizar(id,this.user).subscribe(
+      res=> {
+        console.log(res);
+      },
+      err=> console.error(err)
+    )
+    location.reload();
+  }  
 }
 
