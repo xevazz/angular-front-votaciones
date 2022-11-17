@@ -14,6 +14,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { InicioComponent } from './components/componentsInicio/inicio/inicio.component';
 import { NavigationComponent } from './components/componentsNavigation/navigation/navigation.component';
 import { ActualizarCandidatosComponent } from './components/componentsCandidatos/actualizar-candidatos/actualizar-candidatos.component';
+import { ListarMesasComponent } from './components/componentsMesa/listar-mesas/listar-mesas.component';
+import { ListarPartidosComponent } from './components/componentsPartidos/listar-partidos/listar-partidos.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ActualizarCandidatosComponent } from './components/componentsCandidatos
     AgregarCandidatosComponent,
     InicioComponent,
     NavigationComponent,
-    ActualizarCandidatosComponent
+    ActualizarCandidatosComponent,
+    ListarMesasComponent,
+    ListarPartidosComponent
   ],
   imports: [
     BrowserModule,
