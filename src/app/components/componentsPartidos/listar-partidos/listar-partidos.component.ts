@@ -1,7 +1,7 @@
 import { Component, OnInit,HostBinding} from '@angular/core';
 import { DataService } from "../../../services/data.service";
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
-import { User } from "../../../models/user-partidos";
+import { Partidos } from "../../../models/user-partidos";
 
 export interface DialogData {
 }
@@ -14,9 +14,8 @@ export interface DialogData {
 export class ListarPartidosComponent implements OnInit {
 
   @HostBinding('class') clases = "row";
-  user: User = {
+  user: Partidos = {
     _id:0,
-    partido:'',
     nombre:'',
     lema:'',
   };
@@ -46,7 +45,7 @@ export class ListarPartidosComponent implements OnInit {
   }
 
   getLista(){
-    this.DataService.listar().subscribe(
+    this.DataService.listarPartidos().subscribe(
       res => {
         this.lista = res;
       },
@@ -54,7 +53,7 @@ export class ListarPartidosComponent implements OnInit {
     );
   }
   eliminarUsuario(id: string){
-    this.DataService.eliminar(id).subscribe(
+    this.DataService.eliminarPartidos(id).subscribe(
       res=>{
         console.log(res),
         this.getLista()
@@ -67,7 +66,7 @@ export class ListarPartidosComponent implements OnInit {
   }
   guardarNuevoUsuario(){
     delete this.user._id;
-    this.DataService.crearNuevo(this.user).subscribe(
+    this.DataService.crearNuevoPartidos(this.user).subscribe(
       res=> {
         console.log(res);
         this.bool=false;
@@ -80,7 +79,7 @@ export class ListarPartidosComponent implements OnInit {
   actualizarUsuario(id: string){
 
     delete this.user._id;
-    this.DataService.actualizar(id,this.user).subscribe(
+    this.DataService.actualizarPartidos(id,this.user).subscribe(
       res=> {
         console.log(res);
       },

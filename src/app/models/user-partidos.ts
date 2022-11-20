@@ -1,6 +1,5 @@
-export interface User {
+export interface Partidos {
     _id?: number;
-    partido?: string;
     nombre?: string;
     lema?: string;
 }

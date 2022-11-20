@@ -6,6 +6,7 @@ import { AgregarCandidatosComponent } from "./components/componentsCandidatos/ag
 import { InicioComponent } from "./components/componentsInicio/inicio/inicio.component";
 import { ListarCandidatosComponent } from "./components/componentsCandidatos/listar-candidatos/listar-candidatos.component";
 import { ListarPartidosComponent } from './components/componentsPartidos/listar-partidos/listar-partidos.component';
+import { ListarMesasComponent } from './components/componentsMesa/listar-mesas/listar-mesas.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,10 @@ const routes: Routes = [
     component:ListarPartidosComponent
   },
   
+  {
+    path:'mesas',
+    component:ListarMesasComponent
+  },
 ];
 
 if (sessionStorage.getItem('id')!=null) {

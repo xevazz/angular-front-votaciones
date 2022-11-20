@@ -9,8 +9,6 @@
        <table class="table  text-opacity-100 text-white align-text-bottom table-borderless">
           <thead>
               <tr class="table-responsive-lg text-capitalize">
-                <th scope="col">id</th>
-                <th scope="col">partido</th>
                 <th scope="col">nombre</th>
                 <th scope="col">Lema</th>
                 <th> </th>
@@ -19,8 +17,6 @@
             <tbody>
               <!--ng for trae individualmente cada dato-->
               <tr *ngFor="let dato of lista ">
-                <td>{{dato.id}}</td>
-                <td>{{dato.partido}}</td>
                 <td>{{dato.nombre}}</td>
                 <td>{{dato.lema}}</td>
                 <td>
@@ -85,12 +81,6 @@
         <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
       </div>
       <div id="tablaAct">
-      <div class="modal-body"><div class="p-2">
-        <input type="text" placeholder="Id" [(ngModel)]="user._id">
-      </div>
-      <div class="p-2">
-        <input type="text" placeholder="partido" [(ngModel)]="user.partido">
-      </div>
         <div class="p-2">
           <input type="text" placeholder="representante" [(ngModel)]="user.nombre">
         </div>
@@ -110,7 +100,7 @@
           </div>
         </div>
       </div>
-    </div>
+  
   
   </ng-template>
   <!--crear-->
@@ -122,14 +112,9 @@
       </div>
       <div class="modal-body ">
         <div id="RegistrarCaja">
-          <div class="p-2">
-            <input type="text" placeholder="Id" [(ngModel)]="user._id">
-          </div>
-          <div class="p-2">
-            <input type="text" placeholder="partido" [(ngModel)]="user.partido">
-          </div>
+         
         <div class="p-2">
-          <input type="text" placeholder="representante" [(ngModel)]="user.nombre">
+          <input type="text" placeholder="Nombre" [(ngModel)]="user.nombre">
         </div>
         <div class="p-2">
           <input type="text" placeholder="Lema" [(ngModel)]="user.lema">

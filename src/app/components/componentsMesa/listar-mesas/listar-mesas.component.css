@@ -1,0 +1,158 @@
+#header{
+    color: #003058;
+    font-family: inter;    
+}
+#txtHeader{
+    font-family: inter;
+    font-weight: 500;  
+}
+
+#subHeader{
+    background-color: #012039;   
+}
+
+.adminPartidos{
+    color: white;
+    font-family: inter;
+    margin-bottom: 20px;
+    padding: 25px;
+    font-weight: 400;
+    margin-left: 30px;
+    font-size: medium;
+}
+#fondo{
+    background-color: #003058;   
+    height: fit-content;
+}
+
+#subFondo{
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 2.5%;
+    border-radius: 10px; 
+    background-color: #012039;
+    height: 23rem;
+}
+
+#table{   
+    color: white;
+    border-radius: 10px;
+    margin: 2%;
+    width:96.4%; 
+    background-color: #003058;
+    font: inter;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+    text-align: left;    
+}
+#tbr{
+    overflow:scroll;
+     height: 230px;
+     width: 100%;
+     padding-left: 5rem;
+     padding-top: 1.5rem;   
+}
+
+#btnCrear{
+    background-color:  #003058;
+    color: white;
+    height: 40px;
+    width: 120px;
+    border-color: #003058;
+    border-radius: 5px; 
+}
+
+#botoneroInterno{
+    text-align: right;
+}
+
+#btnSalir{
+    width: 100%;
+    text-align: end;
+}
+#Salir{
+    background-color: #012039;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 40px;
+    width: 120px;  
+}
+#btnVolver{
+    background: #43D1B8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #003058;
+    font-weight: 600;
+    font: inter;
+    height: 40px;
+    width: 120px;  
+}
+
+    #btncaja{
+        padding-top: 0.80cm;
+        padding-right: 690px;
+    }
+    
+    #btnguardar{
+        position:fixed;
+        top: 530px;
+        left: 800px;
+        background-color: #003058;
+    }
+    #btncancelar{
+        position:fixed;
+        top: 530px;
+        left: 700px;
+        background-color:  #E03D5B;
+    }
+    
+    .btn-close{
+        size: 0.2cm
+    }
+
+#Eliminar{
+color: white;
+background-color: #E03D5B;
+font-family: inter;
+border-color: #E03D5B;
+}
+
+body{
+    outline-color: white;
+    
+}
+
+#Actualizar{
+    background-color:#012039;
+    border: none;
+    font-family: inter;
+}
+
+#tablaAct{
+    padding-left: 7.5rem;
+    border-radius: 10px;
+    border: none;
+    font-family: inter;
+}
+#RegistrarCaja{
+    padding-left: 7.5rem;
+    border-radius: 10px;
+    border: none;
+    font-family: inter;
+}
+#Crear{
+    background-color:#012039;
+    border: none;
+    width: 90px;
+    font-family: inter;
+}
+
+#modal-basic-title{
+    font-family: inter;
+}
+#cancelar{
+    font-family: inter;
+
+}
+#danger{
+    font-family: inter;
+}
