@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AgregarCandidatosComponent } from "./components/componentsCandidatos/agregar-candidatos/agregar-candidatos.component";
 import { InicioComponent } from "./components/componentsInicio/inicio/inicio.component";
 import { ListarCandidatosComponent } from "./components/componentsCandidatos/listar-candidatos/listar-candidatos.component";
-
+import { ListarPartidosComponent } from './components/componentsPartidos/listar-partidos/listar-partidos.component';
 
 
 const routes: Routes = [
@@ -21,6 +21,10 @@ const routes: Routes = [
   {
     path:'candidatos',
     component:ListarCandidatosComponent
+  },
+  {
+    path:'partidos',
+    component:ListarPartidosComponent
   },
   
 ];
