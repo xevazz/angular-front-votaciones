@@ -1,15 +1,12 @@
 #header{
-    color: #003058;  
-    
+    color: #003058;
+    font-family: inter;    
 }
 #txtHeader{
     font-family: inter;
-    font-weight: 500;
+    font-weight: 500;  
 }
 
-#body{
-    background-color: #003058;
-}
 #subHeader{
     background-color: #012039;   
 }
@@ -24,18 +21,18 @@
     font-size: medium;
 }
 #fondo{
-    background-color: #003058;
-    width: 100%;
-    
+    background-color: #003058;   
+    height: fit-content;
 }
+
 #subFondo{
-    padding-top: 10px;
+    padding-top: 30px;
     padding-left: 50px;
     padding-right: 50px;
     margin: 2.5%;
     border-radius: 10px; 
     background-color: #012039;
-    height: 22rem;
+    height: 23rem;
 }
 
 #table{   
@@ -46,119 +43,50 @@
     background-color: #003058;
     font: inter;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
-    text-align: left;
- 
-    
+    text-align: left;    
 }
 #tbr{
     overflow:scroll;
-     height:210px;
-     width: 97%;
+     height: 230px;
+     width: 100%;
+     padding-left: 5rem;
+     padding-top: 1.5rem;   
 }
 
 #btnCrear{
     background-color:  #003058;
-    border-radius: 9px;
     color: white;
-    border: none;
     height: 40px;
     width: 120px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;   
+    border-color: #003058;
+    border-radius: 5px; 
 }
 
 #botoneroInterno{
     text-align: right;
-    padding: 1.2rem;   
 }
 
 #btnSalir{
     width: 100%;
     text-align: end;
-
 }
 #Salir{
     background-color: #012039;
     color: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     height: 40px;
-    width: 120px;
-    
+    width: 120px;  
 }
 #btnVolver{
     background: #43D1B8;
-    color: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    height: 40px;
-    width: 120px;
     color: #003058;
     font-weight: 600;
     font: inter;
+    height: 40px;
+    width: 120px;  
 }
 
-
-#noti{ 
-    position:fixed;
-    width: 300px;
-    height: 180px;
-    left: 580px;
-    top: 293px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    }
-    #icono{
-        color: #003058;
-        position: center;
-        left: 40px;
-    }
-    #botonera{
-    position: absolute;
-    left: 65px;
-    }
-    
-    #si{
-        background-color:#FF3F5B;
-        border-color: #FF3F5B;  
-    }
-    
-    #no{
-       background-color:  #003058; 
-       border-color: #003058;
-    }
-    
-    #formulario{
-    position:fixed;
-    width: 300px;
-    height: 180px;
-    left: 580px;
-    top: 293px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    color: grey;
-    
-    }
-    
-    #caja{
-    position:fixed;
-    width: 420px;
-    height: 400px;
-    left: 519px;
-    top: 200px;
-    background-color: white;
-    box-shadow: 0px 4px 4px 4px rgba(0.25, 0.25, 0.25, 0.25);
-    border-radius: 10px;
-    }
-    
-    #text{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400px;
-    padding-left: 2rem;
-    /* identical to box height */
-    color: #012039;
-    
-    }
-    
     #btncaja{
         padding-top: 0.80cm;
         padding-right: 690px;
@@ -181,29 +109,50 @@
         size: 0.2cm
     }
 
-#AlertaEliminado{
-position: absolute;
-width: 270px;
-height: 80px;
-left: 1200px;
-margin-top: 15px;
-animation-duration: 3s;
+#Eliminar{
+color: white;
+background-color: #E03D5B;
+font-family: inter;
+border-color: #E03D5B;
 }
 
-#AlertaCreado{
-    position: absolute;
-    width: 270px;
-    height: 80px;
-    left: 1200px;
-    margin-top: 15px;
-    animation-duration: 3s;
-    }
+body{
+    outline-color: white;
+    
+}
 
-#AlertaEditado{
-        position: absolute;
-        width: 340px;
-        height: 80px;
-        left: 1130px;
-        margin-top: 15px;
-        animation-duration: 3s;
-        }
+#Actualizar{
+    background-color:#012039;
+    border: none;
+    font-family: inter;
+}
+
+#tablaAct{
+    padding-left: 7.5rem;
+    border-radius: 10px;
+    border: none;
+    font-family: inter;
+}
+#RegistrarCaja{
+    padding-left: 7.5rem;
+    border-radius: 10px;
+    border: none;
+    font-family: inter;
+}
+#Crear{
+    background-color:#012039;
+    border: none;
+    width: 90px;
+    font-family: inter;
+}
+
+#modal-basic-title{
+    font-family: inter;
+}
+#cancelar{
+    font-family: inter;
+
+}
+#danger{
+    font-family: inter;
+}

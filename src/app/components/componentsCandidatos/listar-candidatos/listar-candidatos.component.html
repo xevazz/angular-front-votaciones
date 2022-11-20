@@ -1,18 +1,18 @@
 <app-navigation></app-navigation>
 <div id="fondo">
   <div id="subHeader">
-    <h5 class="adminPartidos">Administración de Partidos</h5>
+    <h5 class="adminPartidos">Administración de Candidatos</h5>
   </div>
   <div id="subFondo">
     <div id="table" class="d-flex">
       <div id="tbr">
-        <table class="table  text-opacity-100 text-white align-text-bottom table-borderless">
+       <table class="table  text-opacity-100 text-white align-text-bottom table-borderless">
           <thead>
             <tr class="table-responsive-lg text-capitalize">
               <th scope="col">nombre</th>
               <th scope="col">apellido</th>
-              <th scope="col">cedula</th>
-              <th scope="col">resolucion</th>
+              <th scope="col">cédula</th>
+              <th scope="col">resolución</th>
               <th> </th>
             </tr>
           </thead>
@@ -66,46 +66,48 @@
 <!--eliminar-->
 <ng-template #delete let-modal>
   <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">seguro que deseas eliminar </h4>
+    <h4 class="modal-title" id="modal-basic-title">¿Deseas eliminar el Candidato? </h4>
     <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
   </div>
-  <div class="modal-body">
+  <div id="body" class="modal-body">
 
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="eliminarUsuario(this.id)"
-      (click)="modal.close('Save click')">borrar</button>
+    <button type="button" id="Eliminar" class="btn btn-outline-primary" (click)="eliminarUsuario(this.id)"
+      (click)="modal.close('Save click')">Eliminar</button>
   </div>
 </ng-template>
     <!--editar-->
 <ng-template #edit let-modal>
   <div>
     <div class="modal-header ">
-      <h4 class="modal-title" id="modal-basic-title">Actualizar este elemento</h4>
+      <h4 class="modal-title" id="modal-basic-title">Actualizar este candidato</h4>
       <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
     </div>
+    <div id="tablaAct">
     <div class="modal-body">
       <div class="p-2">
         <input type="text" placeholder="Nombre" [(ngModel)]="user.nombre">
       </div>
       <div class="p-2">
-        <input type="text" placeholder="apellido" [(ngModel)]="user.apellido">
+        <input type="text" placeholder="Apellido" [(ngModel)]="user.apellido">
       </div>
       <div class="p-2">
-        <input type="text" placeholder="cedula" [(ngModel)]="user.cedula">
+        <input type="text" placeholder="Cédula" [(ngModel)]="user.cedula">
       </div>
       <div class="p-2">
         <input type="text" placeholder="Resolucion" [(ngModel)]="user.resolucion">
       </div>
     </div>
+  </div>
     <div>
       <div class="modal-footer">
         <div>
-          <button class="btn btn-danger" type="button" (click)="modal.dismiss('Cross click')">Cancelar</button>
+          <button id="danger" class="btn btn-danger" type="button" (click)="modal.dismiss('Cross click')">Cancelar</button>
         </div>
         <div>
-          <button class="btn btn-primary " type="button" (click)="actualizarUsuario(this.id)"
-            (click)="modal.close('Save click')">actualizar</button>
+          <button id="Actualizar" class="btn btn-primary " type="button" (click)="actualizarUsuario(this.id)"
+            (click)="modal.close('Save click')">Actualizar</button>
         </div>
       </div>
     </div>
@@ -116,31 +118,33 @@
 <ng-template #agregar let-modal>
   <div>
     <div class="modal-header ">
-      <h4 class="modal-title" id="modal-basic-title">Crear una nueva</h4>
+      <h4 class="modal-title" id="modal-basic-title">Crear nuevo Candidato</h4>
       <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
     </div>
     <div class="modal-body ">
+      <div id="RegistrarCaja">
       <div class="p-2">
         <input type="text" placeholder="Nombre" [(ngModel)]="user.nombre">
       </div>
       <div class="p-2">
-        <input type="text" placeholder="apellido" [(ngModel)]="user.apellido">
+        <input type="text" placeholder="Apellido" [(ngModel)]="user.apellido">
       </div>
       <div class="p-2">
-        <input type="text" placeholder="cedula" [(ngModel)]="user.cedula">
+        <input type="text" placeholder="Cédula" [(ngModel)]="user.cedula">
       </div>
       <div class="p-2">
         <input type="text" placeholder="Resolucion" [(ngModel)]="user.resolucion">
       </div>
     </div>
+  </div>
     <div>
       <div class="modal-footer">
         <div>
-          <button class="btn btn-danger" type="button" (click)="modal.dismiss('Cross click')">Cancelar</button>
+          <button id="cancelar" class="btn btn-danger" type="button" (click)="modal.dismiss('Cross click')">Cancelar</button>
         </div>
         <div>
-          <button class="btn btn-primary " type="button" (click)="guardarNuevoUsuario()"
-            (click)="modal.close('Save click')">agregar</button>
+          <button id="Crear" class="btn btn-primary " type="button" (click)="guardarNuevoUsuario()"
+            (click)="modal.close('Save click')">Crear</button>
         </div>
       </div>
     </div>
