@@ -1,7 +1,7 @@
 <app-navigation></app-navigation>
 <div id="fondo">
   <div id="subHeader">
-    <h5 class="adminPartidos">Administración de Candidatos</h5>
+    <h5 class="adminPartidos">Administración de Mesas</h5>
   </div>
   <div id="subFondo">
     <div id="table" class="d-flex">
@@ -65,7 +65,7 @@
 <!--eliminar-->
 <ng-template #delete let-modal>
   <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">¿Deseas eliminar el Candidato? </h4>
+    <h4 class="modal-title" id="modal-basic-title">¿Deseas eliminar la Mesa? </h4>
     <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
   </div>
   <div id="body" class="modal-body">
@@ -80,7 +80,7 @@
 <ng-template #edit let-modal>
   <div>
     <div class="modal-header ">
-      <h4 class="modal-title" id="modal-basic-title">Actualizar este candidato</h4>
+      <h4 class="modal-title" id="modal-basic-title">Actualizar esta Mesa</h4>
       <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
     </div>
     <div id="tablaAct">
@@ -109,7 +109,7 @@
 <ng-template #agregar let-modal>
   <div>
     <div class="modal-header ">
-      <h4 class="modal-title" id="modal-basic-title">Crear nuevo Candidato</h4>
+      <h4 class="modal-title" id="modal-basic-title">Crear nueva Mesa</h4>
       <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
     </div>
     <div class="modal-body ">
