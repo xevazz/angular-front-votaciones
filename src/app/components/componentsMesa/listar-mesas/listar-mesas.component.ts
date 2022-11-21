@@ -18,7 +18,7 @@ export class ListarMesasComponent implements OnInit {
   user : Mesas = {
     _id:0,
     cedula:0,
-    partido: null
+    partido : {_id:0, nombre:"",lema:""},
   };
   user2: Partidos = {
     _id:0,
@@ -106,6 +106,7 @@ export class ListarMesasComponent implements OnInit {
     this.DataService.listarPartidos().subscribe(
       res => {
         this.lista2 = res;
+        
       },
       err => console.error(err)
     );
