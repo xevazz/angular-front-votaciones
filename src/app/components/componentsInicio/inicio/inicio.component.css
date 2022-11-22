@@ -1,0 +1,148 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+img{
+    max-width: 100%;
+}
+p{
+    margin: 0;
+}
+.header{
+    align-items: center;
+    color: #003058;
+    width: 100%;
+    padding-top: 68px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.headerLogo{
+    max-width: 150px;
+    margin-right: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 16px;
+}
+
+.headerText{
+    text-align: center;
+}
+
+.headerTitle{
+    font-size: 64px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.headerSubtitle{
+    font-size: 32px;
+}
+
+.adminContent{
+    background-color: #003058;
+    color: white;
+    display: flex;
+}
+
+.adminContent div{
+    width: 50%;
+}
+
+.adminContentLeft{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 84px 0 100px 0;
+}
+
+.adminContentTitle{
+    font-size: 36px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.adminContentText{
+    font-size: 24px;
+    margin-bottom: 72px;
+}
+.adminContentList{
+    list-style: none;
+    background: #012039;
+    color: #012039;
+    max-width: 460px;
+    width: 100%;
+    margin: 0;
+    padding: 60px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.adminContentItem{
+    margin-bottom: 40px;
+}
+.adminContentItem:last-child{
+    margin-bottom: 0;
+}
+.adminContentLeftButton{
+    font-size: 24px;
+    font-weight: 700;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: inherit;
+    background-color: white;
+    display: block;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+.adminContentLeftButton:hover{
+    background-color: #43D1B8;
+    color: white;
+}
+
+.adminContentRight{
+    background-image: url('https://images.pexels.com/photos/10762961/pexels-photo-10762961.jpeg');
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 80px;
+    box-sizing: border-box;
+}
+.adminContentRight:before{
+    position: absolute; 
+    content: ''; 
+    display: block; 
+    top: 0; 
+    left: 0; 
+    height: 100%; 
+    width: 100%;
+    background: #003058;
+    opacity: .6;
+    z-index: 1;
+}
+
+.adminContentRightButton{
+    position: relative;
+    z-index: 2;
+    background: #012039;
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    display: block;
+    padding: 12px 80px;
+}
+.adminContentRightButton:hover{
+    background-color: #43D1B8;
+}

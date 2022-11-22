@@ -1,16 +1,43 @@
-<app-navigation></app-navigation>
-<div class="d-flex p-5">
-    <div id="btnvolver">
-      <button class="btn btn-primary" [routerLink]="['/candidatos']" type="button">candidatos</button>
-    </div>
-    <div id="btnvolver">
-      <button class="btn btn-primary" [routerLink]="['/partidos']" type="button">Partidos</button>
-    </div>
-    <div>
-      <button  class="btn btn-primary " [routerLink]="['/']" type="button">Salir</button>
-    </div>
-    <div>
-      <button  class="btn btn-primary " [routerLink]="['/mesas']" type="button">Mesas</button>
-    </div>
-  </div>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="inicio.component.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="headerLogo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Logo_de_la_Registradur%C3%ADa_Nacional_del_Estado_Civil_Colombiana_%28versi%C3%B3n_negro%29.png" alt="">
+        </div>
+        <div class="headerText">
+            <h1 class="headerTitle">Votaciones para el Senado</h1>
+            <p class="headerSubtitle">
+                Resultados
+            </p>
+        </div>
+    </header>
+    <section class="adminContent">
+        <div class="adminContentLeft">
+            <h3 class="adminContentTitle">Bienvenido al administrador</h3>
+            <p class="adminContentText">Por favor elija la acción que desea realizar</p>
+            <ul class="adminContentList">
+                <li class="adminContentItem"><a class="adminContentLeftButton" [routerLink]="['/candidatos']"  href="#">Administrar Candidatos</a></li>
+                <li class="adminContentItem"><a class="adminContentLeftButton" [routerLink]="['/partidos']"  href="#">Administrar Partidos</a></li>
+                <li class="adminContentItem"><a class="adminContentLeftButton" [routerLink]="['/mesas']" href="#">Administrar Mesas</a></li>
+                <!--<li class="adminContentItem"><a class="adminContentLeftButton" href="#">Administrar Resultados</a></li>
+                <li class="adminContentItem"><a class="adminContentLeftButton" href="#"> Reportes</a></li>-->
+            </ul>           
+        </div>
+        <div class="adminContentRight">
+            <button class="adminContentRightButton" [routerLink]="['/']">Salir</button>
+        </div>
+    </section>
+</body>
+</html>
  
